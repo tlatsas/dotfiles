@@ -1,0 +1,52 @@
+[color]
+    ui = always
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[alias]
+    ap = add --patch
+    st = status -sb
+    co = checkout
+    cm = commit
+    br = branch
+    bra = branch --all
+    sb = show-branch
+    l = log --oneline --decorate
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    df = diff
+    dc = diff --cached
+    rb = rebase
+    fe = fetch
+    fa = fetch --all --prune
+    fo = fetch origin
+    subs = submodule foreach git
+    sub = submodule
+    rinfo = remote show origin
+
+[push]
+    default = upstream
+
+[branch]
+    autosetupmerge = true
+    autosetuprebase = always
+
+[merge]
+    stat = true
+[user]
+	name = Tasos Latsas
