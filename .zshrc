@@ -83,3 +83,5 @@ _set_prompt
 
 #Make sure zsh-git-prompt is loaded from your .zshrc:
 #source "/usr/local/opt/zsh-git-prompt/zshrc.sh"
+
+source ~/.zpath
