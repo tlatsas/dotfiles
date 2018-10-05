@@ -15,6 +15,9 @@ setopt share_history
 
 unsetopt autocd beep
 
+# remove percent sign for same-line outputs
+unsetopt PROMPT_SP
+
 autoload -Uz up-line-or-beginning-search
 autoload -Uz down-line-or-beginning-search
 zle -N up-line-or-beginning-search
