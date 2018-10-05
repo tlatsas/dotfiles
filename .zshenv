@@ -1,9 +1,8 @@
 # Enable this for debugging
 # set -x
 
-# locale configuration
-export LANG=en_US.utf8
-export LC_ALL=C
+# locale
+export LANG=en_GB.UTF-8
 
 # git prompt
 export GIT_PS1_SHOWDIRTYSTATE=1
