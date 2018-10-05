@@ -85,3 +85,4 @@ _set_prompt
 #source "/usr/local/opt/zsh-git-prompt/zshrc.sh"
 
 source ~/.zpath
+source ~/.zfunc

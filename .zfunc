@@ -1,0 +1,3 @@
+function disable_n_env() {
+    export PATH=`echo $PATH | perl -p -e 's/:$ENV{HOME}\/\.n\/bin//g'`
+}
