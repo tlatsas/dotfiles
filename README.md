@@ -16,3 +16,7 @@
 * python
 * aws-cli
 * xmllint
+* go
+* jenv
+* groovy
+* mysql

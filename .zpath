@@ -1,2 +1,2 @@
-path=(~/.rvm/bin ~/bin ${N_PREFIX}/bin ${NPM_PACKAGES}/bin $path)
+path=(~/.rvm/bin ~/bin ${N_PREFIX}/bin ${NPM_PACKAGES}/bin ~/go/bin $path ${MY_SQL}/bin)
 typeset -U path

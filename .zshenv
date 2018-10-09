@@ -15,3 +15,9 @@ export NPM_PACKAGES=${HOME}/.npm-packages
 
 # misc
 export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
+
+# groovy
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
+# MySQL from homebrew
+export MY_SQL=/usr/local/opt/mysql@5.7
