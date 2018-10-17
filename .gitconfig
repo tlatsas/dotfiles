@@ -48,5 +48,9 @@
 
 [merge]
     stat = true
+
+[core]
+    excludesfile = ~/.gitignore_global
+
 [user]
     name = Tasos Latsas
