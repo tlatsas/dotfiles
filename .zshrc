@@ -90,3 +90,4 @@ _set_prompt
 
 source ~/.zpath
 source ~/.zfunc
+source ~/.alias
