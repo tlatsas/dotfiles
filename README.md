@@ -20,3 +20,5 @@
 * jenv
 * groovy
 * mysql
+* pyenv
+* pipenv
