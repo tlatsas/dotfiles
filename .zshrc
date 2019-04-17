@@ -44,14 +44,16 @@ zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
 
-source ~/.alias
-
 __rvm_ps1() {
     if [[ `rvm current` != "system" ]]; then
         echo "[ $(rvm-prompt) ]"
     else
-        echo ''
+        echo "[ ruby-sys ]"
     fi
+}
+
+__node_ps1() {
+    echo "[ N/n $(node -v)/$(npm -v) ]"
 }
 
 # set prompt function
@@ -71,8 +73,9 @@ _set_prompt() {
     setopt PROMPT_SUBST
     p_git='$(__git_ps1 "( %s )" )'
     local p_rvm='$(__rvm_ps1)'
+    local p_node='$(__node_ps1)'
 
-    PS1=" $PR_WHITE¦ $PR_CYAN_B%~$PR_RST $PR_MAGENTA$p_git$PR_RST $PR_YELLOW$p_rvm$PR_RST"
+    PS1=" $PR_WHITE¦ $PR_CYAN_B%~$PR_RST $PR_MAGENTA$p_git$PR_RST $PR_RED$p_rvm$PR_RST$PR_BLUE$p_node$PR_RST"
 
     # ugly indentation for multi-line prompts!
     if [[ $UID -eq 0 ]]; then
@@ -83,7 +86,9 @@ $PR_RED>$PR_RED_B>$PR_RST "
 $PR_GREEN>$PR_GREEN_B>$PR_RST "
     fi
 }
+
 _set_prompt
+#precmd_functions+=(_set_prompt)
 
 #Make sure zsh-git-prompt is loaded from your .zshrc:
 #source "/usr/local/opt/zsh-git-prompt/zshrc.sh"
