@@ -1,2 +1,2 @@
-path=(~/.rvm/bin $PYENV_ROOT/bin ~/bin ${N_PREFIX}/bin ${NPM_PACKAGES}/bin ~/go/bin ~/.jenv/shims $GOROOT $path ${MY_SQL}/bin)
+path=(~/.rvm/bin $PYENV_ROOT/bin ~/bin ${N_PREFIX}/bin ${NPM_PACKAGES}/bin ~/go/bin ~/.jenv/shims $GOROOT $path /usr/local/sbin ${MY_SQL}/bin)
 typeset -U path
