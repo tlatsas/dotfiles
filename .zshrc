@@ -48,16 +48,12 @@ ZSH=~/ohmyzsh
 source ${ZSH}/lib/prompt_info_functions.zsh
 source ${ZSH}/lib/spectrum.zsh
 source ${ZSH}/lib/theme-and-appearance.zsh
+source ${ZSH}/lib/spectrum.zsh
 source ${ZSH}/lib/git.zsh
 source ${ZSH}/plugins/git/git.plugin.zsh
 
+# theme, aka zsh prompt
 source ~/zsh-themes/avit-custom.zsh-theme
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green] %}"
-ZSH_THEME_RUBY_PROMPT_PREFIX="%{$fg[red]%}"
-ZSH_THEME_RUBY_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_RVM_PROMPT_OPTIONS="u v g"
-ZSH_THEME_NVM_PROMPT_PREFIX="%{$fg[green]⬢ %}"
-ZSH_THEME_NVM_PROMPT_SUFFIX="%{$reset_color%}"
 
 source ~/.zpath
 source ~/.zfunc

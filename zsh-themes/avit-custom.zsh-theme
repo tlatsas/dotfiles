@@ -1,5 +1,6 @@
 # Custom theme based on AVIT ZSH Theme
 # Best when used with FiraCode font
+# Requires spectrum.zsh
 
 # settings
 typeset +H _current_dir="%{$fg_bold[blue]%}%~%{$reset_color%} "
@@ -7,7 +8,7 @@ typeset +H _return_status="%{$fg_bold[red]%}%(?..⍉)%{$reset_color%}"
 typeset +H _hist_no="%{$fg[grey]%}%h%{$reset_color%}"
 
 PROMPT='
-$(_user_host)${_current_dir} $(git_prompt_info) $(ruby_prompt_info) $(nvm_prompt_info)
+$(_user_host)${_current_dir}$(git_prompt_info) $(ruby_prompt_info) $(nvm_prompt_info)
 %{%(!.%F{red}.%F{white})%}▶%{$resetcolor%} '
 
 PROMPT2='%{%(!.%F{red}.%F{white})%}◀%{$reset_color%} '
@@ -71,7 +72,7 @@ function _git_time_since_commit() {
 MODE_INDICATOR="%{$fg_bold[yellow]%}❮%{$reset_color%}%{$fg[yellow]%}❮❮%{$reset_color%}"
 
 # Git prompt settings
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green] %}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}✔%{$reset_color%}"
@@ -83,11 +84,12 @@ ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[cyan]%}§ "
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[white]%}◒ "
 
 # Ruby prompt settings
-ZSH_THEME_RUBY_PROMPT_PREFIX="%{$fg[grey]%}"
+ZSH_THEME_RUBY_PROMPT_PREFIX="%{$fg[magenta]%}"
 ZSH_THEME_RUBY_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_RVM_PROMPT_OPTIONS="u v g"
 
 # NVM prompt settings
-ZSH_THEME_NVM_PROMPT_PREFIX="%{$fg[grey]%}"
+ZSH_THEME_NVM_PROMPT_PREFIX="%{$FG[150]⬢ %}"
 ZSH_THEME_NVM_PROMPT_SUFFIX="%{$reset_color%}"
 
 # Colors vary depending on time lapsed.
