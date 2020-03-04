@@ -10,8 +10,7 @@ export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 
 # node config variables
-export N_PREFIX=${HOME}/.n
-export NPM_PACKAGES=${HOME}/.npm-packages
+export NVM_DIR="$HOME/.nvm"
 
 # misc
 export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1

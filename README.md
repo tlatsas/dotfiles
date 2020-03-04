@@ -8,7 +8,7 @@
 * colordiff
 * openssl
 * nmap
-* n
+* nvm
 * rvm
 * git
 * tmux
