@@ -44,54 +44,20 @@ zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
 
-__rvm_ps1() {
-    if [[ `rvm current` != "system" ]]; then
-        echo "[ $(rvm-prompt) ]"
-    else
-        echo "[ ruby-sys ]"
-    fi
-}
+ZSH=~/ohmyzsh
+source ${ZSH}/lib/prompt_info_functions.zsh
+source ${ZSH}/lib/spectrum.zsh
+source ${ZSH}/lib/theme-and-appearance.zsh
+source ${ZSH}/lib/git.zsh
+source ${ZSH}/plugins/git/git.plugin.zsh
 
-__node_ps1() {
-    echo "[ N/n $(node -v)/$(npm -v) ]"
-}
-
-# set prompt function
-_set_prompt() {
-    autoload -U zsh/terminfo
-    autoload -U colors && colors
-
-    # make some aliases for the colours: (coud use normal escap.seq's too)
-    for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
-        eval PR_$color='%{$fg[${(L)color}]%}'
-        eval PR_${color}_B='%{$fg_bold[${(L)color}]%}'
-    done
-    PR_RST="%{$terminfo[sgr0]%}"
-
-    # git prompt
-    source /usr/local/etc/bash_completion.d/git-prompt.sh
-    setopt PROMPT_SUBST
-    p_git='$(__git_ps1 "( %s )" )'
-    local p_rvm='$(__rvm_ps1)'
-    local p_node='$(__node_ps1)'
-
-    PS1=" $PR_WHITE¦ $PR_CYAN_B%~$PR_RST $PR_MAGENTA$p_git$PR_RST $PR_RED$p_rvm$PR_RST$PR_BLUE$p_node$PR_RST"
-
-    # ugly indentation for multi-line prompts!
-    if [[ $UID -eq 0 ]]; then
-       PS1="$PR_RED_B%n$PR_RST$PS1
-$PR_RED>$PR_RED_B>$PR_RST "
-    else
-       PS1="$PR_GREEN_B%n$PR_RST$PS1
-$PR_GREEN>$PR_GREEN_B>$PR_RST "
-    fi
-}
-
-_set_prompt
-#precmd_functions+=(_set_prompt)
-
-#Make sure zsh-git-prompt is loaded from your .zshrc:
-#source "/usr/local/opt/zsh-git-prompt/zshrc.sh"
+source ~/zsh-themes/avit-custom.zsh-theme
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green] %}"
+ZSH_THEME_RUBY_PROMPT_PREFIX="%{$fg[red]%}"
+ZSH_THEME_RUBY_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_RVM_PROMPT_OPTIONS="u v g"
+ZSH_THEME_NVM_PROMPT_PREFIX="%{$fg[green]⬢ %}"
+ZSH_THEME_NVM_PROMPT_SUFFIX="%{$reset_color%}"
 
 source ~/.zpath
 source ~/.zfunc
