@@ -82,6 +82,10 @@ ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%}✖ "
 ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%}▴ "
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[cyan]%}§ "
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[white]%}◒ "
+ZSH_THEME_GIT_PROMPT_STASHED="%{$fg[magenta]%}☳ "
+ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[green]%}↗ "
+ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg[magenta]%}↙ "
+ZSH_THEME_GIT_PROMPT_DIVERGED="%{$fg[red]%}⇋ "
 
 # Ruby prompt settings
 ZSH_THEME_RUBY_PROMPT_PREFIX="%{$fg[magenta]%}"
