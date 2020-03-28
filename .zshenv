@@ -23,7 +23,7 @@ export MY_SQL=/usr/local/opt/mysql@5.7
 
 # GO
 export GOPATH=~/code/go
-export GOROOT=/usr/local/opt/go/libexec/bin
+export GOROOT=/usr/local/opt/go/libexec
 
 # python
 export PYENV_ROOT="$HOME/.pyenv"
