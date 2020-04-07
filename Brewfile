@@ -26,6 +26,7 @@ brew "git"
 brew "wget"
 brew "rsync"
 cask "font-fira-code"
+brew "mas"
 
 # Languges
 brew "go"
