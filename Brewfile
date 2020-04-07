@@ -48,6 +48,7 @@ brew "awscli"
 brew "packer"
 brew "terraform"
 brew "tflint"
+brew "serverless"
 
 # Services
 brew "mysql", restart_service: :changed
