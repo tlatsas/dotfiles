@@ -23,7 +23,6 @@ alias h='history'
 alias h\?='history | grep -i '
 alias last='last | head -15'
 
-
 # network
 alias ping='ping -c 5'
 alias lanscan='sudo nmap -PE -sn -n'
@@ -38,3 +37,6 @@ alias fxml="xmllint --format -"
 
 # homebrew
 alias bu='echo "Starting brew update process..."; brew update && brew upgrade'
+
+# rails
+alias be='bundle exec'
